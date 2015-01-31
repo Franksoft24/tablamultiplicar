@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="ES-es">
+<head>
+<meta charset="utf-8">
+<title>Tabla de multiplicar</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+	function verificarCampo()
+	{
+		var verificar = document.getElementById('num').value;
+		if(!isNaN(verificar))
+		{
+			
+			document.getElementById('ok').disabled=false;
+			document.getElementById('ok').style.background="#19B5FE";
+			document.getElementById('alert').innerHTML="";	
+		}else
+		{
+			
+			document.getElementById('ok').disabled=true;
+			document.getElementById('ok').style.background="#CF000F";
+			document.getElementById('alert').innerHTML="Deben ser valores numericos.";
+		}
+	}
+</script>
+</head>
+<body>
+	<section><center>
+		<form method="get" action="*">
+			<table>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="number" value="" id="num" required maxleght="2" onkeyup="verificarCampo()"/><input id="ok" type="submit" value="OK" onmouseover=""></td>
+				</tr>
+				<tr>
+					<td id="alert"></td>
+				</tr>
+			</table>		
+		</form>
+	</center></section>
+</body>
+</html>
