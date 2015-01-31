@@ -13,13 +13,13 @@
 <!-- Publicamos nuestro servlet aqui -->
 
     <servlet>
-        <servlet-name>multiplicar</servlet-name>
-        <servlet-class>multiplicar</servlet-class>
+        <servlet-name>Multiplicar</servlet-name>
+        <servlet-class>Multiplicar</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>multiplicar</servlet-name>
-        <url-pattern>/multiplicar</url-pattern>
+        <servlet-name>Multiplicar</servlet-name>
+        <url-pattern>/Multiplicar</url-pattern>
     </servlet-mapping>
 
 <!-- Fin de la publicacion de servlets -->

@@ -52,6 +52,7 @@ section table tr td
 	padding:5%;
 	font-size:150%;
 	color: #ECECEC;
+	transition: 0.8s;
 }
 input
 {
