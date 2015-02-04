@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Tabla de multiplicar</title>
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../WEB-INF/recursos/css/reset.css">
+<link rel="stylesheet" href="../WEB-INF/recursos/css/style.css">
 <script type="text/javascript">
-	function verificarCampo()
+	function verificarCampo(id)
 	{
-		var verificar = document.getElementById('num').value;
+		var verificar = document.getElementById(id).value;
 		if(!isNaN(verificar))
 		{
 			
@@ -23,17 +23,30 @@
 			document.getElementById('alert').innerHTML="Deben ser valores numericos.";
 		}
 	}
+	/*function verificarMayor()
+	{
+		var num1, num2;
+		num1 = document.getElementById('num1').value;
+		num2 = document.getElementById('num2').value;
+		if(num1>num2){
+			alert("El segundo numero debe ser menor al primero. :/ que pena")
+			document.getElementById('num1').value="";
+			document.getElementById('num2').value="";
+		}else{
+			document.getElementById('ok').disabled=false;
+		}
+	}*/
 </script>
 </head>
 <body>
 	<section style="margin-top:10%"><center>
-		<form method="get" action="http://localhost:8080/tablaMultiplicar/Multiplicar">
+		<form method="get" action="http://localhost:8080/tablaMultiplicar/multiplicar">
 			<table>
 				<tr>
 					<td></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="num" value="" id="num" required maxlenght="2" onkeyup="verificarCampo()"/><input id="ok" type="submit" value="OK" onmouseover=""></td>
+					<td><input type="text" name="num1" value="" id="num1" required maxlength="2" onkeyup="verificarCampo('num1')"/>-<input type="text" name="num2" id="num2" value="" required maxlength="2" onkeyup="verificarCampo('num2')"/><input id="ok" type="submit" value="OK" onmouseover="verificarMayor()"></td>
 				</tr>
 				<tr>
 					<td id="alert"></td>
